@@ -1,24 +1,12 @@
-localhost:3000/api/v1/minggu6
+POST /api/v1/minggu9/register
+POST /api/v1/minggu9/login
+GET /api/v1/minggu9/refreshtoken
+GET /api/v1/minggu9/logout
 
-GET /
-tampilkan semua anime beserta nama kategorinya
-where anime_judul like '%keyword%' or (anime_tahun_rilis > tahunawal and anime_tahun_rilis < tahunakhir)
-[
-    {
-        anime_id: "",
-        anime_judul: "",
-        anime_tahun_rilis: "",
-        kategori_nama: "",
-        kategori_deskripsi: ""
-    }
-]
+GET /api/v1/minggu9/admin -> hasilnya cukup halo, admin namanya .... (yang bisa akses admin saja)
+GET /api/v1/minggu9/user -> hasilnya cukup halo, user namanya .... (yang bisa akses admin dan non admin)
 
-GET /favorite/:mhs_nrp
-tampilkan data siswa + semua anime yang dia sukai
-{
-    mhs_nrp:"",
-    mhs_nama:""
-    favorite: [
-        {anime_id:"", anime_judul:""}
-    ]
-}
+GET /api/v1/minggu9/lelucon -> tembak pakai apikey, akan memotong saldo sebesar 1000 rupiah
+- berikan pengecekan kalau apikey tidak ada/ salah
+- berikan pengecekan kalau saldo telah habis
+- hasilnya halo nama user ...., kamu lucu banget hari ini

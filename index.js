@@ -4,6 +4,7 @@ const {
   minggu3Router,
   minggu4Router,
   minggu6Router,
+  minggu9Router,
 } = require("./src/routes");
 const { default: axios } = require("axios");
 const Joi = require("joi");
@@ -13,7 +14,9 @@ require("dotenv").config();
 
 // untuk baca body wajib ada
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 
 // http://localhost:3000
 // bila function, seteelah => tidak ada {}, berarti otomatis mode
@@ -24,7 +27,7 @@ app.use("/api/v1/game", gameRouter);
 app.use("/api/v1/minggu3", minggu3Router);
 app.use("/api/v1/minggu4", minggu4Router);
 app.use("/api/v1/minggu6", minggu6Router);
-
+app.use("/api/v1/minggu9", minggu9Router);
 // GET /minggu7/pokemon?id=
 app.get("/api/v1/minggu7/pokemon", async (req, res) => {
   // req.query untuk url yang mainannya adalah ?
