@@ -1,0 +1,24 @@
+localhost:3000/api/v1/minggu6
+
+GET /
+tampilkan semua anime beserta nama kategorinya
+where anime_judul like '%keyword%' or (anime_tahun_rilis > tahunawal and anime_tahun_rilis < tahunakhir)
+[
+    {
+        anime_id: "",
+        anime_judul: "",
+        anime_tahun_rilis: "",
+        kategori_nama: "",
+        kategori_deskripsi: ""
+    }
+]
+
+GET /favorite/:mhs_nrp
+tampilkan data siswa + semua anime yang dia sukai
+{
+    mhs_nrp:"",
+    mhs_nama:""
+    favorite: [
+        {anime_id:"", anime_judul:""}
+    ]
+}
